@@ -1,0 +1,78 @@
+ html, body {
+  margin: 0;
+  padding: 0;
+  background-color: black;
+   }
+
+    nav{
+             background-color: #000000;
+             padding: 35px;
+             
+    }
+
+    nav ul{
+             list-style: none;
+             margin: 0;
+             padding: 0;
+             display: flex;
+             gap: 25px;
+             margin-left: 880px;
+    }
+
+    nav ul li{
+             margin-right: 20px;
+    } 
+
+     nav ul li{
+             color: white;          
+             text-decoration: none;
+     }
+
+nav a {
+    color: white;       
+    text-decoration: none; 
+    font-size: 25px;
+    font-family: 'Arial', sans-serif;
+    margin-left: auto;
+
+    position: relative;          
+    transition: color 0.3s ease; 
+}
+
+
+nav a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;               
+    left: 0;
+    background-color: white;
+    transition: width 0.3s ease; 
+}
+
+
+nav a:hover {
+    color: #ffd700; 
+}
+
+nav a:hover::after {
+    width: 100%; 
+}
+.pizza {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin: 10px;
+            display: inline-block;
+            width: 250px;
+            vertical-align: top;
+            text-align: center;
+            box-shadow: 2px 2px 6px rgba(0,0,0,0.1);
+            color: #ccc;
+        }
+        .pizza img {
+            width: 200px;
+            height: 150px; /* Definido altura para manter padrão */
+            object-fit: cover;
+            border-radius: 10px;
+        }
