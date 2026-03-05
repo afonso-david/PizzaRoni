@@ -34,7 +34,9 @@ while ($row = $result->fetch_assoc()) {
         </ul>
     </nav>
 
-<h1>Menu de Pizzas</h1>
+<h1 class="titulo">Menu de Pizzas</h1>
+
+<div class="menu-container">
 
 <?php if (count($pizzas) > 0): ?>
     <?php foreach ($pizzas as $row): ?>
@@ -42,12 +44,15 @@ while ($row = $result->fetch_assoc()) {
             <img src="<?php echo $row['imagem']; ?>" alt="<?php echo $row['nome']; ?>">
             <h3><?php echo $row['nome']; ?></h3>
             <p><?php echo $row['descricao']; ?></p>
-            <p><strong>€<?php echo number_format($row['preco'], 2); ?></strong></p>
+            <div class="preco">€<?php echo number_format($row['preco'], 2); ?></div>
         </div>
     <?php endforeach; ?>
 <?php else: ?>
     <p>Nenhuma pizza encontrada.</p>
 <?php endif; ?>
+
+</div>
+
 
 <?php
 // Fechar a conexão MySQLi

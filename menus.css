@@ -59,20 +59,68 @@ nav a:hover {
 nav a:hover::after {
     width: 100%; 
 }
-.pizza {
-            border: 1px solid #ccc;
-            padding: 10px;
-            margin: 10px;
-            display: inline-block;
-            width: 250px;
-            vertical-align: top;
-            text-align: center;
-            box-shadow: 2px 2px 6px rgba(0,0,0,0.1);
-            color: #ccc;
-        }
-        .pizza img {
-            width: 200px;
-            height: 150px; /* Definido altura para manter padrão */
-            object-fit: cover;
-            border-radius: 10px;
-        }
+/* CONTAINER DAS PIZZAS */
+/* TITULO */
+.titulo{
+    text-align: center;
+    color: white;
+    font-size: 40px;
+    margin-top: 40px;
+    font-family: Arial, sans-serif;
+}
+
+/* GRID DAS PIZZAS */
+.menu-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
+    gap: 40px;
+    padding: 60px;
+}
+
+/* CARD DA PIZZA */
+.pizza{
+    background: #111;
+    border-radius: 15px;
+    padding: 25px;
+    text-align: center;
+    color: #ddd;
+    border: 1px solid #222;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* HOVER */
+.pizza:hover{
+    transform: translateY(-10px);
+    box-shadow: 0px 10px 25px rgba(0,0,0,0.7);
+}
+
+/* IMAGEM */
+.pizza img{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+
+    margin-bottom: 15px;
+}
+
+/* TITULO DA PIZZA */
+.pizza h3{
+    color: white;
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+/* DESCRIÇÃO */
+.pizza p{
+    font-size: 15px;
+    line-height: 1.5;
+    color: #bbb;
+}
+
+/* PREÇO */
+.preco{
+    margin-top: 15px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #ffd700;
+}
