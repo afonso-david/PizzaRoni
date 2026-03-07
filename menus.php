@@ -27,9 +27,9 @@ while ($row = $result->fetch_assoc()) {
 
   <nav>
         <ul>
-             <li><a href="index.html">Home</a></li>
+             <li><a href="index.php">Home</a></li>
             <li><a href="menus.php">Menus</a></li>
-            <li><a href="Sobre.html">Sobre</a></li>
+            <li><a href="Sobre.php">Sobre</a></li>
             <li><a href="Restaurantes.html">Restaurantes</a></li>
         </ul>
     </nav>

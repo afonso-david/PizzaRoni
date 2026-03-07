@@ -13,9 +13,13 @@ if ($conn->connect_error) {
 
 $conn->set_charset("utf8");
 
-$sql = "SELECT imgagem FROM menus WHERE nome='Menu Peperoni'";
-$resultado = $conn->query($sql);
+// Pizza Peperoni
+$sql_peperoni = "SELECT imagem FROM menus WHERE nome='Menu Peperoni'";
+$result_peperoni = $conn->query($sql_peperoni);
+$linha_peperoni = $result_peperoni->fetch_assoc();
 
-$linha = $resultado->fetch_assoc();
-
+// Pizza 4 Queijos
+$sql_4queijos = "SELECT imagem FROM menus WHERE nome='Menu 4 Queijos'";
+$result_4queijos = $conn->query($sql_4queijos);
+$linha_4queijos = $result_4queijos->fetch_assoc();
 ?>

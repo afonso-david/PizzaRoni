@@ -18,6 +18,17 @@ $resultado = $conn->query($sql);
 
 // Buscar resultado
 $linha = $resultado->fetch_assoc();
+
+$sql_peperoni = "SELECT imagem FROM menus WHERE nome='Menu Peperoni'";
+$result_peperoni = $conn->query($sql_peperoni);
+$linha_peperoni = $result_peperoni->fetch_assoc();
+
+
+// Pizza 4 Queijos
+$sql_4queijos = "SELECT imagem FROM menus WHERE nome='Menu 4 Queijos'";
+$result_4queijos = $conn->query($sql_4queijos);
+$linha_4queijos = $result_4queijos->fetch_assoc();
+
 ?>
 
 <!DOCTYPE html>
@@ -33,8 +44,8 @@ $linha = $resultado->fetch_assoc();
     <ul>
         <li><a href="index.php">Home</a></li>
         <li><a href="menus.php">Menus</a></li>
-        <li><a href="Sobre.html">Sobre</a></li>
-        <li><a href="Restaurantes.html">Restaurantes</a></li>
+        <li><a href="Sobre.php">Sobre</a></li>
+        <li><a href="Restaurantes.php">Restaurantes</a></li>
     </ul>
 </nav>
 
@@ -50,13 +61,28 @@ $linha = $resultado->fetch_assoc();
     </div>
 </section>
 
-<section class="menu">
-    <h2>Pizza Peperoni</h2>
-    <?php if ($linha): ?>
-        <img src="<?php echo $linha['imagem']; ?>" alt="Pizza Peperoni">
-    <?php else: ?>
-        <p>Pizza Peperoni não encontrada.</p>
-    <?php endif; ?>
+    <div class="container-pizzas">
+
+        <div class="pizza-item">
+            <h2>Pizza Peperoni</h2>
+            <?php if ($linha_peperoni): ?>
+                <img src="<?php echo $linha_peperoni['imagem']; ?>" alt="Pizza Peperoni">
+            <?php else: ?>
+                <p>Pizza Peperoni não encontrada.</p>
+            <?php endif; ?>
+        </div>
+
+        <div class="pizza-item">
+            <h2>Pizza 4 Queijos</h2>
+            <?php if ($linha_4queijos): ?>
+                <img src="<?php echo $linha_4queijos['imagem']; ?>" alt="Pizza 4 Queijos">
+            <?php else: ?>
+                <p>Pizza 4 Queijos não encontrada.</p>
+            <?php endif; ?>
+        </div>
+
+    </div>
+
 </section>
 
 </body>
